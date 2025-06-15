@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="contact.css" />
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+  <div class="contact-container">
+    <h1>Contact Me</h1>
+    <div class="contact-info">
+      <p><strong>Email:</strong> yassermuna01@gmail.com</p>
+      <p><strong>Phone:</strong> +251 973 415854</p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/yasa606" target="_blank">yasa606</a></p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/yasa_muna" target="_blank">@yasa_muna</a></p>
+    </div>
+
+    <form id="contact-form">
+  <input type="text" name="from_name" placeholder="Your Name" required />
+  <input type="email" name="from_email" placeholder="Your Email" required />
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send</button>
+  <p id="status-message"></p>
+</form>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  emailjs.init("eI-qlByaAOhtv52z6"); // <- Replace with your actual public key
+
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_dfyj4h8", "template_e4uwcec", this)
+      .then(() => {
+        document.getElementById("status-message").innerText = "Message sent!";
+        this.reset();
+      }, (err) => {
+        document.getElementById("status-message").innerText = "Failed to send: " + JSON.stringify(err);
+      });
+  });
+</script>
+
+</body>
+</html>

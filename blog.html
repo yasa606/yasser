@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Yasser</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<style>
+.blog-post {
+    background-color: #333;
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    color: #e5e5e5;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-post h2 {
+    color: #ff0000;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.blog-post p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+</style>
+<body>
+  <div class="hero-header">
+    <div class="wrapper">
+      <header>
+        <div class="logo">
+          <i class="fa-solid fa-y"></i>
+          <div class="logo-text">YASSER</div>
+        </div>
+        <nav>
+          <div class="togglebtn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="navlinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a class="active" href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="container">
+        <div class="hero-text">
+          <h1>My Blog</h1>
+          <p>Welcome to my blog! Here I share my thoughts and experiences as a web developer.</p>
+
+          <!-- Blog Post 1 -->
+          <div class="blog-post">
+            <h2>What is a Web Developer?</h2>
+            <p>A web developer is a programmer who creates websites and web applications. We work on both the frontend (what users see) and backend (the server-side that powers everything).</p>
+            <p>Frontend developers use HTML, CSS, and JavaScript to design the visual parts of a website. Backend developers use languages like PHP, Python, or Node.js to build the server, database, and application logic.</p>
+            <p>Being a web developer is exciting because you build real products that people use every day. You can create websites for businesses, personal portfolios, online stores, and much more!</p>
+          </div>
+
+          <!-- Blog Post 2 -->
+          <div class="blog-post">
+            <h2>Frontend vs Backend Development</h2>
+            <p>Frontend development focuses on the visual part of a website. This includes layouts, colors, fonts, and animations using HTML, CSS, and JavaScript.</p>
+            <p>Backend development deals with the server, database, and server-side logic. It ensures that user data is saved, processed, and secure.</p>
+            <p>Full-stack developers handle both frontend and backend to build complete web applications.</p>
+          </div>
+
+          <!-- Blog Post 3 -->
+          <div class="blog-post">
+            <h2>Why I Love Web Development</h2>
+            <p>Web development allows me to turn ideas into real, working products. I enjoy solving problems, designing user interfaces, and seeing my code come to life on the web.</p>
+            <p>Every project teaches me something new and helps me grow as a developer. The web is always evolving, so there's always more to learn!</p>
+          </div>
+
+          <!-- Blog Post 4 -->
+          <div class="blog-post">
+            <h2>5 Must-Know HTML Tags for Beginners</h2>
+            <p>1. <code>&lt;h1&gt; to &lt;h6&gt;</code> — Headings.</p>
+            <p>2. <code>&lt;p&gt;</code> — Paragraphs.</p>
+            <p>3. <code>&lt;a&gt;</code> — Links.</p>
+            <p>4. <code>&lt;img&gt;</code> — Images.</p>
+            <p>5. <code>&lt;div&gt;</code> — Containers.</p>
+            <p>Mastering these tags will give you a strong foundation for web development!</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var togglebtn=document.querySelector(".togglebtn");
+    var nav=document.querySelector(".navlinks");
+    var links=document.querySelector(".navlinks li");
+
+    togglebtn.addEventListener("click", function(){
+        this.classList.toggle("click");
+        nav.classList.toggle("open");
+    })
+
+    var typed=new Typed(".input" , {
+        strings:["Frontend Developer","UX Designer","Web Developer"],
+        typeSpeed:70,
+        backSpeed:55,
+        loop:true
+    })
+  </script>
+</body>
+</html>

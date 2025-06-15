@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PROFILE</title>
+    <link rel="stylesheet" href="style.css">
+    <!----==============font awesome cdn icon css=============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-y"></i>
+                    <div class="logo-text">YASSER</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                         <li><a class="active" href="index.html">Home</a></li>
+                         <li><a href="portofolio.html">Portfolio</a></li>
+                         <li><a href="resume.html">Resume</a></li>
+                         <li><a href="blog.html">Blog</a></li>
+                         <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="ya.jpg" alt="profile pic" class="" id="">
+                </div>
+                <div class="hero-text">
+                    <h5>hi I'm <span class="input">Frontend Developer</span></h5>
+                    <h1>Yasser osama</h1>
+                    <p>I specialize in building responsive, user-friendly websites and web applicatio
+                        ns. Whether it's crafting sleek frontends or connecting powerful backends, 
+                        I love turning ideas into digital experiences that work beautifully. Currently, I'm open to new projects and collaborations!</p>
+                    
+                    <div class="btn-group">
+                        <a href="CV.pdf"  download class="btn active">Download CV</a>
+                        <a href="contact.html" class="btn ">Contact</a>
+                    </div>
+
+                    <div class="social"> 
+                        <a href="https://www.instagram.com/yasa_muna"><i class="fa-brands fa-instagram"></i></a>   
+                        <a href="https://github.com/yasa606"><i class="fa-brands fa-github"></i></a>   
+                        <a href="https://www.linkedin.com/in/yasser-osama-99894336b/"><i class="fa-brands fa-linkedin"></i></a>     
+                    </div>
+                </div>
+            </div>
+        </dikv>
+    </dev>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+    <script>
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input" , {
+            strings:["Frontend Developer"," UX Designer" , "Web Developer"],
+            typedSpeed:7,
+            backSpeed:55,
+            loop:true
+
+        })
+    </script>
+</body>
+</html>

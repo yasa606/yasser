@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio | Yasser</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<style>
+.projects-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.project-card {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.project-card h2 {
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #e5e5e5;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.project-card .btn {
+  background-color: #444;
+  border: 2px solid #e5e5e5;
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+}
+
+.project-card .btn:hover {
+  background-color: #ff0000;
+  border-color: #ff0000;
+}
+</style>
+<body>
+  <div class="hero-header">
+    <div class="wrapper">
+      <header>
+        <div class="logo">
+          <i class="fa-solid fa-y"></i>
+          <div class="logo-text">YASSER</div>
+        </div>
+        <nav>
+          <div class="togglebtn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="navlinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="portfolio.html">Portfolio</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="container">
+        <div class="hero-text">
+          <h1>My Projects</h1>
+          <p>Here are some of my best frontend and full-stack projects I've worked on.</p>
+
+          <div class="projects-list">
+
+            <div class="project-card">
+              <h2>Project One</h2>
+              <p>A responsive personal portfolio website built with HTML, CSS, and JavaScript.</p>
+              <a href="https://github.com/yasser/project-one" class="btn" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+              <h2>Project Two</h2>
+              <p>A full-stack blog application built with Node.js, Express, and MongoDB.</p>
+              <a href="https://github.com/yasser/project-two" class="btn" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+              <h2>Project Three</h2>
+              <p>A modern e-commerce website using React and Firebase authentication.</p>
+              <a href="https://github.com/yasser/project-three" class="btn" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var togglebtn = document.querySelector(".togglebtn");
+    var nav = document.querySelector(".navlinks");
+
+    togglebtn.addEventListener("click", function () {
+      this.classList.toggle("click");
+      nav.classList.toggle("open");
+    });
+  </script>
+</body>
+</html>
